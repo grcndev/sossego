@@ -1,0 +1,70 @@
+"use client";
+
+const CASES = [
+  {
+    sector: "Setor Financeiro",
+    headline: "Vazamento de dados de 2 milhões de clientes",
+    result: "Crise contida em 72h. Queda de reputação revertida em 30 dias.",
+    icon: "🏦",
+  },
+  {
+    sector: "Varejo Nacional",
+    headline: "Recall de produto após acidente com consumidor",
+    result: "Narrativa controlada. Zero processos de imprensa. Marca preservada.",
+    icon: "🛒",
+  },
+  {
+    sector: "Saúde & Farmacêutica",
+    headline: "Denúncia anônima amplificada por influenciadores",
+    result: "Resposta publicada em 4h. Engajamento negativo reduzido 87%.",
+    icon: "🏥",
+  },
+];
+
+export function Cases() {
+  return (
+    <section
+      id="casos"
+      style={{ fontFamily: "'Inter', sans-serif", background: "#fcf6f1" }}
+      className="py-28"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16">
+          <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-4">
+            Casos de referência
+          </span>
+          <h2
+            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight"
+          >
+            Crises reais. Resultados mensuráveis.
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {CASES.map((c) => (
+            <div
+              key={c.sector}
+              className="bg-[#0C0A09] rounded-2xl p-8 flex flex-col gap-6"
+            >
+              <span className="text-4xl">{c.icon}</span>
+              <div>
+                <p className="text-[#FACC15] text-xs font-bold uppercase tracking-widest mb-2">
+                  {c.sector}
+                </p>
+                <h3
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="text-lg font-bold text-white mb-4 leading-snug"
+                >
+                  {c.headline}
+                </h3>
+                <div className="h-px bg-white/10 mb-4" />
+                <p className="text-white/60 text-sm leading-relaxed">{c.result}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
