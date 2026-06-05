@@ -1,25 +1,36 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
-import logof from "../../assets/logof.png";
+import logo from "../../assets/logo.png";
 
 export function Footer() {
   return (
     <footer
       style={{ fontFamily: "'Inter', sans-serif" }}
-      className="bg-[#0C0A09] py-16"
+      className="bg-[#0C0A09] py-10"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-12">
           <div className="max-w-xs">
-            <a href="/sossego" className="flex items-center gap-2">
-              <div className="inline-flex rounded-full">
-                <Image src={logof} alt="Sossego" className="w-16 h-16 rounded-full" />
+            <Link href="/" className="inline-flex items-center gap-3">
+              <div className="inline-flex rounded-full bg-[#fcf6f1] p-1">
+                <Image
+                  src={logo}
+                  alt="Sossego"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full"
+                />
               </div>
-            </a>
-            <p className="text-white/40 text-sm leading-relaxed">
-              Gerenciamento de crises
-            </p>
+              <div className="leading-tight">
+                <p
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="text-white font-black text-xl"
+                >
+                  Sossego
+                </p>
+                <p className="text-white/50 text-sm">Gerenciamento de risco</p>
+              </div>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
@@ -52,13 +63,40 @@ export function Footer() {
                   {col.title}
                 </p>
                 <ul className="flex flex-col gap-2">
-                  {col.links.map((l) => (
-                    <li key={l}>
-                      <span className="text-white/40 text-sm hover:text-white/70 cursor-pointer transition-colors">
-                        {l}
-                      </span>
-                    </li>
-                  ))}
+                  {col.title === "Contato" ? (
+                    <>
+                      <li>
+                        <a
+                          href="tel:+5582981462725"
+                          className="text-white/40 text-sm hover:text-white/80 transition-colors"
+                        >
+                          (82) 98146-2725
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="mailto:contato@sossego.com.br"
+                          className="text-white/40 text-sm hover:text-white/80 transition-colors"
+                        >
+                          contato@sossego.com.br
+                        </a>
+                      </li>
+                      <li>
+                        <span className="text-white/40 text-sm">Maceió, AL</span>
+                      </li>
+                      <li>
+                        <span className="text-white/40 text-sm">São Paulo, SP</span>
+                      </li>
+                    </>
+                  ) : (
+                    col.links.map((l) => (
+                      <li key={l}>
+                        <span className="text-white/40 text-sm hover:text-white/80 transition-colors">
+                          {l}
+                        </span>
+                      </li>
+                    ))
+                  )}
                 </ul>
               </div>
             ))}

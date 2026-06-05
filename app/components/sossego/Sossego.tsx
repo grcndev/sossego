@@ -3,7 +3,7 @@
 import { Nav } from "./Nav";
 import { Hero } from "./Hero";
 import { PhotoSection } from "./PhotoSection";
-import { Pricing } from "./Pricing";
+import { Mission } from "./Mission";
 import { Footer } from "./Footer";
 
 export function Sossego() {
@@ -12,7 +12,7 @@ export function Sossego() {
       <Nav />
       <Hero />
       <PhotoSection />
-      <Pricing />
+      <Mission />
       <Footer />
     </div>
   );

@@ -5,7 +5,7 @@ const BOARDROOM_IMG =
 
 export function PhotoSection() {
   return (
-    <section className="relative h-[500px] md:h-[600px] overflow-hidden">
+    <section className="relative h-140 md:h-170 overflow-hidden">
       <div className="absolute inset-0 bg-[#3B0764]/75 z-10" />
       <img
         src={BOARDROOM_IMG}
@@ -25,8 +25,7 @@ export function PhotoSection() {
           style={{ fontFamily: "'Playfair Display', serif" }}
           className="text-3xl md:text-5xl font-black text-white max-w-3xl leading-tight mb-8"
         >
-          &quot;Uma crise bem gerenciada pode fortalecer mais a reputação do que
-          nunca tê-la vivido.&quot;
+          &quot;Gerenciar uma crise com excelência é a única oportunidade de transformar vulnerabilidade em vantagem reputacional duradoura.&quot;
         </blockquote>
         <p className="text-white/60 text-sm">
           Luis Dorvillé - Fundador & Diretor de Estratégia, Sossego

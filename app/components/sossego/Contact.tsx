@@ -133,7 +133,7 @@ export function Contact() {
                 type="submit"
                 className="w-full py-4 bg-[#3B0764] text-white rounded-xl font-semibold hover:bg-[#6D28D9] transition-colors text-sm"
               >
-                Solicitar contato urgente
+                Solicitar atendimento
               </button>
             </form>
           )}
