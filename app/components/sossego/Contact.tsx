@@ -3,8 +3,12 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 
+const WHATSAPP_NUMBER = "5582981462725";
+const EMAIL_TO = "contato@sossego.com.br";
+
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [message, setMessage] = useState("");
   const [form, setForm] = useState({
     nome: "",
     empresa: "",
@@ -14,6 +18,17 @@ export function Contact() {
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    const msg = [
+      "Solicitação de atendimento (site Sossego)",
+      "",
+      `Nome: ${form.nome}`,
+      `Empresa: ${form.empresa}`,
+      `Telefone: ${form.telefone}`,
+      "",
+      "Situação:",
+      form.situacao,
+    ].join("\n");
+    setMessage(msg);
     setSubmitted(true);
   }
 
@@ -49,7 +64,7 @@ export function Contact() {
               (82) 98146-2725
             </a>
             <a
-              href="mailto:crise@sossego.com.br"
+              href={`mailto:${EMAIL_TO}`}
               className="flex items-center gap-3 text-[#3B0764] font-semibold hover:text-[#6D28D9] transition-colors"
             >
               <span className="w-10 h-10 rounded-full bg-[#3B0764]/10 flex items-center justify-center text-lg">
@@ -62,17 +77,43 @@ export function Contact() {
 
         <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#0C0A09]/8">
           {submitted ? (
-            <div className="text-center py-12">
-              <span className="text-5xl block mb-4">✅</span>
+            <div className="text-center py-10">
+              <span className="text-5xl block mb-4">📨</span>
               <h3
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 className="text-2xl font-black text-[#0C0A09] mb-2"
               >
-                Mensagem recebida
+                Enviar mensagem
               </h3>
               <p className="text-[#0C0A09]/60 text-sm">
-                Um especialista entrará em contato em até 30 minutos.
+                Escolha o canal. A mensagem já vai pronta com os dados do formulário.
               </p>
+
+              <div className="mt-8 grid gap-3">
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 bg-[#25D366] text-white rounded-xl font-semibold hover:brightness-105 transition-colors text-sm text-center"
+                >
+                  Enviar por WhatsApp
+                </a>
+                <a
+                  href={`mailto:${EMAIL_TO}?subject=${encodeURIComponent(
+                    "Solicitação de atendimento — Sossego"
+                  )}&body=${encodeURIComponent(message)}`}
+                  className="w-full py-4 border border-[#0C0A09]/15 text-[#0C0A09] rounded-xl font-semibold hover:border-[#3B0764] hover:text-[#3B0764] transition-colors text-sm text-center"
+                >
+                  Enviar por e-mail
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="w-full py-4 text-[#0C0A09]/60 rounded-xl font-semibold hover:text-[#0C0A09] transition-colors text-sm"
+                >
+                  Voltar e editar
+                </button>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
