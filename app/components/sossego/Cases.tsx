@@ -24,7 +24,7 @@ const CASES = [
 ] as const;
 
 function CaseIcon({ name }: { name: (typeof CASES)[number]["icon"] }) {
-  const className = "h-6 w-6 text-[#FACC15]";
+  const className = "h-[22px] w-[22px] text-[#FACC15]";
   switch (name) {
     case "finance":
       return <Building2 className={className} />;
