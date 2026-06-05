@@ -2,30 +2,154 @@
 
 const SERVICES = [
   {
-    icon: "🛡",
-    title: "Gestão de Crise em Tempo Real",
+    icon: "shield",
+    title: "Mapeamento de focos ativos, potenciais e futuros",
     description:
-      "Equipe disponível 24/7 para neutralizar ameaças à reputação antes que se tornem avalanches. Tempo de resposta inicial em até 30 minutos.",
+      "Identificamos exatamente o que está em curso – ou prestes a eclodir – e como cada onda pode afetar você, sua equipe, sua produção ou sua empresa.",
   },
   {
-    icon: "📡",
-    title: "Comunicação Estratégica",
+    icon: "radar",
+    title: "Plano de atuação por estágio da crise",
     description:
-      "Elaboração de notas, releases e posicionamentos que controlam a narrativa nos principais veículos de imprensa.",
+      "Construímos com você um plano sob medida para o passo atual da crise (pré-crise, crise aguda ou pós-crise). Nada de templates: agimos conforme a situação real.",
   },
   {
-    icon: "⚖",
+    icon: "scales",
     title: "Coordenação Jurídico-Midiática",
     description:
       "Alinhamento entre equipes jurídicas e de comunicação para que cada declaração proteja e não exponha.",
   },
   {
-    icon: "📊",
+    icon: "chart",
     title: "Monitoramento Reputacional",
     description:
       "Rastreamento contínuo de menções digitais e sinais de risco, com alertas preventivos antes da crise eclodir.",
   },
-];
+ ] as const;
+
+function ServiceIcon({ name }: { name: (typeof SERVICES)[number]["icon"] }) {
+  const commonProps = {
+    width: 22,
+    height: 22,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "text-[#3B0764]",
+  };
+
+  switch (name) {
+    case "shield":
+      return (
+        <svg {...commonProps}>
+          <path
+            d="M12 3l7 4v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V7l7-4z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9.5 12l1.7 1.7L14.8 10"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "radar":
+      return (
+        <svg {...commonProps}>
+          <path
+            d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18z"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <path
+            d="M12 3v9l6 6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M3.8 15a9.3 9.3 0 0 0 5.2 5.2"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "scales":
+      return (
+        <svg {...commonProps}>
+          <path
+            d="M12 3v18"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 7h12"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 7l-3 6h6l-3-6z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 7l-3 6h6l-3-6z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9 21h6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "chart":
+      return (
+        <svg {...commonProps}>
+          <path
+            d="M4 19V5"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M4 19h16"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 15v-5"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 15v-8"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 15v-3"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+  }
+}
 
 export function Services() {
   return (
@@ -43,7 +167,7 @@ export function Services() {
             style={{ fontFamily: "'Playfair Display', serif" }}
             className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight"
           >
-            Controle total quando tudo sai do controle
+           Gerenciamento de crises sem retórica
           </h2>
         </div>
 
@@ -51,12 +175,13 @@ export function Services() {
           {SERVICES.map((s) => (
             <div
               key={s.title}
-              className="bg-white rounded-2xl p-8 border border-[#0C0A09]/8 hover:border-[#3B0764]/30 hover:shadow-lg transition-all group"
+              className="bg-white rounded-2xl p-8 border border-[#0C0A09]/8 shadow-sm hover:shadow-md hover:border-[#3B0764]/25 transition-all group"
             >
-              <span className="text-3xl mb-5 block">{s.icon}</span>
+              <div className="h-12 w-12 rounded-full bg-[#3B0764]/10 flex items-center justify-center mb-5">
+                <ServiceIcon name={s.icon} />
+              </div>
               <h3
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-xl font-bold text-[#0C0A09] mb-3 group-hover:text-[#3B0764] transition-colors"
+                className="text-lg md:text-xl font-bold text-[#0C0A09] mb-3 tracking-tight group-hover:text-[#3B0764] transition-colors"
               >
                 {s.title}
               </h3>
