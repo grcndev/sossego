@@ -1,93 +1,46 @@
 "use client";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1920";
+const VIDEO_URL =
+  "https://res.cloudinary.com/ds6qnvgbm/video/upload/v1780613265/14375214_1920_1080_30fps_fxv0yn.mp4";
 
 export function Hero() {
   return (
     <section
-      style={{ fontFamily: "'Inter', sans-serif", background: "#fcf6f1" }}
-      className="pt-16 min-h-screen flex flex-col"
+      style={{ fontFamily: "'Inter', sans-serif" }}
+      className="pt-1 bg-[#3B0764]"
     >
-      <div className="flex-1 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center py-20">
-        <div>
-          <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-6">
-            Gerencimento de Crise
-          </span>
+      <div className="max-w-7xl mx-auto px-6 py-28">
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
           <h1
             style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-5xl md:text-7xl font-black text-[#0C0A09] leading-[1.05] mb-6"
+            className="text-5xl md:text-6xl font-black text-white leading-tight"
           >
-            Sossego: 
-            <br />
-            Quando a crise
-            <br />
-            <span className="text-[#3B0764]">bate à porta,</span>
-            <br />
-            nós abrimos.
+            Sossego
           </h1>
-          <p className="text-lg text-[#0C0A09]/60 leading-relaxed mb-10 max-w-md">
-            A Sossego é a consultoria que empresas e líderes chamam quando
-            minutos separam uma crise administrável de um dano irreversível à
-            reputação.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#contato"
-              className="px-8 py-4 bg-[#3B0764] text-white rounded-xl hover:bg-[#6D28D9] transition-colors font-semibold"
-            >
-              Acionamento de emergência
-            </a>
-            <a
-              href="#serviços"
-              className="px-8 py-4 border-2 border-[#0C0A09]/20 text-[#0C0A09] rounded-xl hover:border-[#3B0764] hover:text-[#3B0764] transition-colors font-semibold"
-            >
-              Ver serviços
-            </a>
+          <span className="inline-flex items-center self-center px-4 py-1.5 mt-1.5 bg-[#FACC15] text-[#0C0A09] text-sm font-bold uppercase tracking-widest rounded">
+            Gerenciamento de Crise
+          </span>
           </div>
         </div>
 
-        <div className="relative h-[480px] md:h-[560px] rounded-2xl overflow-hidden">
-          <div className="absolute inset-0 bg-[#3B0764]/20 z-10 rounded-2xl" />
-          <img
-            src={HERO_IMG}
-            alt="Equipe de gestão de crise em reunião estratégica"
-            className="w-full h-full object-cover"
-            loading="eager"
-            decoding="async"
-          />
-          {/* <div className="absolute bottom-6 left-6 right-6 z-20 bg-white/95 backdrop-blur rounded-xl p-5 shadow-xl">
-            <p className="text-xs text-[#3B0764] font-bold uppercase tracking-widest mb-1">
-              Resposta ativa agora
-            </p>
-            <p className="text-sm text-[#0C0A09]/80 leading-snug">
-              Nossa sala de guerra está operacional 24 horas por dia,{" "}
-              <strong>365 dias por ano.</strong>
-            </p>
-          </div> */}
+        <div className="mt-10 mx-auto w-full max-w-6xl">
+          <div className="relative w-full aspect-video rounded-2xl border-2 border-[#FACC15] bg-[#0C0A09]/15 shadow-sm overflow-hidden">
+            <video
+              src={VIDEO_URL}
+              className="absolute inset-0 w-full h-full"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="bg-[#3B0764] py-8">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-8">
-          {[
-            { val: "+200", label: "crises gerenciadas" },
-            { val: "96%", label: "reputação preservada" },
-            { val: "10 anos", label: "de experiência no mercado" },
-          ].map((s) => (
-            <div key={s.label} className="text-center">
-              <p
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-3xl md:text-4xl font-black text-[#FACC15] mb-1"
-              >
-                {s.val}
-              </p>
-              <p className="text-xs text-white/60 uppercase tracking-wider">
-                {s.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        <p className="mt-6 text-base md:text-lg text-white/70 leading-relaxed max-w-3xl mx-auto text-center">
+          A Sossego é a consultoria que empresas e líderes chamam quando minutos
+          separam uma crise administrável de um dano irreversível à reputação.
+        </p>
       </div>
     </section>
   );
