@@ -17,10 +17,7 @@ export function Nav() {
     { label: "Contato", href: "/contato" },
   ];
   return (
-    <nav
-      style={{ fontFamily: "'Inter', sans-serif" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-[#fcf6f1]/95 backdrop-blur-sm border-b border-[#0C0A09]/8"
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fcf6f1]/95 backdrop-blur-sm border-b border-[#0C0A09]/8">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
            <Image src={logo} alt="Sossego" className="w-16 h-16 rounded-full" />

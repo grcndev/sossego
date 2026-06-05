@@ -1,15 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../assets/logo.png";
 
 export function Footer() {
   return (
-    <footer
-      style={{ fontFamily: "'Inter', sans-serif" }}
-      className="bg-[#0C0A09] py-10"
-    >
+    <footer className="bg-[#0C0A09] py-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-12">
           <div className="max-w-xs">
@@ -22,10 +17,7 @@ export function Footer() {
                 />
               </div>
               <div className="leading-tight">
-                <p
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-white font-black text-xl"
-                >
+                <p className="text-white font-black text-xl">
                   Sossego
                 </p>
                 <p className="text-white/50 text-sm">Gerenciamento de risco</p>
