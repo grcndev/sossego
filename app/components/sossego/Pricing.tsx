@@ -11,7 +11,7 @@ export function Pricing() {
       style={{ fontFamily: "'Inter', sans-serif" }}
       className="pt-40 pb-24 bg-[#3B0764] min-h-screen"
     >
-      <div className="max-w-6xl lg:max-w-7xl mx-auto px-6 flex flex-col items-center gap-10">
+      <div className="max-w-6xl min-[375px]:max-w-7xl mx-auto px-6 flex flex-col items-center gap-10 min-[375px]:gap-8">
         <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-[0.35em] text-white/70 mb-4">
             GERENCIAMENTO DE CRISES
@@ -27,7 +27,7 @@ export function Pricing() {
           </h2>
         </div>
 
-        <div className="w-full max-w-5xl lg:max-w-6xl">
+        <div className="w-full max-w-5xl min-[375px]:max-w-6xl">
           <div className="relative w-full aspect-video rounded-2xl bg-white/10 border border-white/15 shadow-sm overflow-hidden">
             <video
               src={VIDEO_URL}
