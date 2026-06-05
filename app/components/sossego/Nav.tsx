@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../../assets/logo.png";
 
+const WHATSAPP_NUMBER = "5582981462725";
+
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
@@ -37,12 +39,14 @@ export function Nav() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            href="/contato"
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-[#3B0764] text-white text-sm rounded-lg hover:bg-[#6D28D9] transition-colors"
           >
             Fale Conosco
-          </Link>
+          </a>
         </div>
 
         <button
@@ -68,12 +72,14 @@ export function Nav() {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="/contato"
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-[#3B0764] text-white text-sm rounded-lg text-center"
           >
             Falar com especialista
-          </Link>
+          </a>
         </div>
       )}
     </nav>
