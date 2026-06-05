@@ -1,23 +1,39 @@
+"use client";
+
+import { Building2, Hospital, ShoppingCart } from "lucide-react";
+
 const CASES = [
   {
     sector: "Setor Financeiro",
     headline: "Vazamento de dados de 2 milhões de clientes",
     result: "Crise contida em 72h. Queda de reputação revertida em 30 dias.",
-    icon: "🏦",
+    icon: "finance",
   },
   {
     sector: "Varejo Nacional",
     headline: "Recall de produto após acidente com consumidor",
     result: "Narrativa controlada. Zero processos de imprensa. Marca preservada.",
-    icon: "🛒",
+    icon: "retail",
   },
   {
     sector: "Saúde & Farmacêutica",
     headline: "Denúncia anônima amplificada por influenciadores",
     result: "Resposta publicada em 4h. Engajamento negativo reduzido 87%.",
-    icon: "🏥",
+    icon: "health",
   },
-];
+] as const;
+
+function CaseIcon({ name }: { name: (typeof CASES)[number]["icon"] }) {
+  const className = "h-[22px] w-[22px] text-[#FACC15]";
+  switch (name) {
+    case "finance":
+      return <Building2 className={className} />;
+    case "retail":
+      return <ShoppingCart className={className} />;
+    case "health":
+      return <Hospital className={className} />;
+  }
+}
 
 export function Cases() {
   return (
@@ -38,7 +54,9 @@ export function Cases() {
               key={c.sector}
               className="bg-[#0C0A09] rounded-2xl p-8 flex flex-col gap-6"
             >
-              <span className="text-4xl">{c.icon}</span>
+              <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center">
+                <CaseIcon name={c.icon} />
+              </div>
               <div>
                 <p className="text-[#FACC15] text-xs font-bold uppercase tracking-widest mb-2">
                   {c.sector}

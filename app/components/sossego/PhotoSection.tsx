@@ -17,10 +17,10 @@ export function PhotoSection() {
           Nossa filosofia
         </span>
         <blockquote className="text-3xl md:text-5xl font-black text-white max-w-3xl leading-tight mb-8">
-          &quot;Gerenciar uma crise com excelência é a única oportunidade de transformar vulnerabilidade em vantagem reputacional duradoura.&quot;
+          &quot;Gerenciamento de crise envolve proximidade, relações humanas, nossa filosofia é tocar duramente a vida de seus colaboradores e seus donos e acionistas.&quot;
         </blockquote>
         <p className="text-white/60 text-sm">
-          Luis Dorvillé - Fundador & Diretor de Estratégia, Sossego
+          Equipe Sossego
         </p>
       </div>
     </section>

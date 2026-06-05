@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
+import { Mail, Phone } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5582981462725";
 const EMAIL_TO = "contato@sossego.com.br";
@@ -51,8 +52,8 @@ export function Contact() {
               href="tel:+5582981462725"
               className="flex items-center gap-3 text-[#3B0764] font-semibold hover:text-[#6D28D9] transition-colors"
             >
-              <span className="w-10 h-10 rounded-full bg-[#3B0764]/10 flex items-center justify-center text-lg">
-                📞
+              <span className="h-12 w-12 rounded-full bg-[#3B0764]/10 flex items-center justify-center">
+                <Phone className="h-[22px] w-[22px] text-[#3B0764]" />
               </span>
               (82) 98146-2725
             </a>
@@ -60,8 +61,8 @@ export function Contact() {
               href={`mailto:${EMAIL_TO}`}
               className="flex items-center gap-3 text-[#3B0764] font-semibold hover:text-[#6D28D9] transition-colors"
             >
-              <span className="w-10 h-10 rounded-full bg-[#3B0764]/10 flex items-center justify-center text-lg">
-                ✉️
+              <span className="h-12 w-12 rounded-full bg-[#3B0764]/10 flex items-center justify-center">
+                <Mail className="h-[22px] w-[22px] text-[#3B0764]" />
               </span>
               contato@sossego.com.br
             </a>
