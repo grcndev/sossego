@@ -1,5 +1,3 @@
-"use client";
-
 const STEPS = [
   {
     num: "01",
@@ -20,20 +18,13 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section
-      id="como-funciona"
-      style={{ fontFamily: "'Inter', sans-serif" }}
-      className="py-28 bg-[#fcf6f1]"
-    >
+    <section id="como-funciona" className="py-28 bg-[#fcf6f1]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12 text-center">
           <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-4">
             Como funciona
           </span>
-          <h2
-            style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-2xl mx-auto leading-tight"
-          >
+          <h2 className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-2xl mx-auto leading-tight">
             Do acionamento ao controle em horas
           </h2>
         </div>
@@ -50,10 +41,7 @@ export function HowItWorks() {
                     </div>
                   </div>
                   <div className="w-full flex-1 min-h-40 bg-white rounded-2xl border border-[#0C0A09]/10 p-6 shadow-sm flex flex-col justify-center">
-                    <h3
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                      className="text-xl md:text-2xl font-black text-[#0C0A09] mb-2"
-                    >
+                    <h3 className="text-xl md:text-2xl font-black text-[#0C0A09] mb-2">
                       {step.title}
                     </h3>
                     <p className="text-[#0C0A09]/70 text-sm md:text-base leading-relaxed">
