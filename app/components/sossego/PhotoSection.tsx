@@ -16,6 +16,12 @@ export function PhotoSection() {
         <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-8">
           Nossa filosofia
         </span>
+        <blockquote
+          style={{ fontFamily: "'Playfair Display', serif" }}
+          className="text-3xl md:text-5xl font-black text-white max-w-3xl leading-tight mb-8"
+        >
+          &quot;Gerenciamento de crise envolve proximidade, relações humanas, nossa filosofia é tocar duramente a vida de seus colaboradores e seus donos e acionistas.
+&quot;
         <blockquote className="text-3xl md:text-5xl font-black text-white max-w-3xl leading-tight mb-8">
           &quot;Gerenciamento de crise envolve proximidade, relações humanas, nossa filosofia é tocar duramente a vida de seus colaboradores e seus donos e acionistas.&quot;
         </blockquote>
