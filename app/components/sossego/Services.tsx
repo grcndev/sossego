@@ -1,5 +1,3 @@
-"use client";
-
 const SERVICES = [
   {
     icon: "🛡",
@@ -29,20 +27,13 @@ const SERVICES = [
 
 export function Services() {
   return (
-    <section
-      id="serviços"
-      style={{ fontFamily: "'Inter', sans-serif", background: "#fcf6f1" }}
-      className="py-28"
-    >
+    <section id="serviços" className="py-28 bg-[#fcf6f1]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
           <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-4">
             O que fazemos
           </span>
-          <h2
-            style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight"
-          >
+          <h2 className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight">
             Controle total quando tudo sai do controle
           </h2>
         </div>
@@ -54,10 +45,7 @@ export function Services() {
               className="bg-white rounded-2xl p-8 border border-[#0C0A09]/8 hover:border-[#3B0764]/30 hover:shadow-lg transition-all group"
             >
               <span className="text-3xl mb-5 block">{s.icon}</span>
-              <h3
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-xl font-bold text-[#0C0A09] mb-3 group-hover:text-[#3B0764] transition-colors"
-              >
+              <h3 className="text-xl font-bold text-[#0C0A09] mb-3 group-hover:text-[#3B0764] transition-colors">
                 {s.title}
               </h3>
               <p className="text-[#0C0A09]/60 leading-relaxed text-sm">

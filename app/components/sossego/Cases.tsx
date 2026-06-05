@@ -1,5 +1,3 @@
-"use client";
-
 const CASES = [
   {
     sector: "Setor Financeiro",
@@ -23,20 +21,13 @@ const CASES = [
 
 export function Cases() {
   return (
-    <section
-      id="casos"
-      style={{ fontFamily: "'Inter', sans-serif", background: "#fcf6f1" }}
-      className="py-28"
-    >
+    <section id="casos" className="py-28 bg-[#fcf6f1]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
           <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-4">
             Casos de referência
           </span>
-          <h2
-            style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight"
-          >
+          <h2 className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight">
             Crises reais. Resultados mensuráveis.
           </h2>
         </div>
@@ -52,10 +43,7 @@ export function Cases() {
                 <p className="text-[#FACC15] text-xs font-bold uppercase tracking-widest mb-2">
                   {c.sector}
                 </p>
-                <h3
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                  className="text-lg font-bold text-white mb-4 leading-snug"
-                >
+                <h3 className="text-lg font-bold text-white mb-4 leading-snug">
                   {c.headline}
                 </h3>
                 <div className="h-px bg-white/10 mb-4" />

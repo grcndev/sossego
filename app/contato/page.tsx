@@ -1,5 +1,3 @@
-"use client";
-
 import { Nav } from "../components/sossego/Nav";
 import { Contact } from "../components/sossego/Contact";
 import { Footer } from "../components/sossego/Footer";
