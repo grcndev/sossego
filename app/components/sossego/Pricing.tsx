@@ -1,6 +1,5 @@
 "use client";
 
-const WHATSAPP_NUMBER = "5582981462725";
 const VIDEO_URL =
   "https://res.cloudinary.com/ds6qnvgbm/video/upload/v1780613265/14375214_1920_1080_30fps_fxv0yn.mp4";
 
@@ -9,26 +8,23 @@ export function Pricing() {
     <section
       id="planos"
       style={{ fontFamily: "'Inter', sans-serif" }}
-      className="pt-40 pb-24 bg-[#3B0764] min-h-screen"
+      className="py-28 bg-[#3B0764]"
     >
-      <div className="max-w-6xl min-[375px]:max-w-7xl mx-auto px-6 flex flex-col items-center gap-10 min-[375px]:gap-8">
-        <div className="text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.35em] text-white/70 mb-4">
-            GERENCIAMENTO DE CRISES
-          </p>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16 text-center">
+          <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-4">
+            Missão
+          </span>
           <h2
             style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-5xl md:text-7xl font-black text-white leading-[1.05]"
+            className="text-4xl md:text-5xl font-black text-white max-w-2xl mx-auto leading-tight"
           >
-            Sossego{" "}
-            <span className="align-super text-base font-bold text-[#FACC15]">
-              TM
-            </span>
+            Viva o que você quer da vida
           </h2>
         </div>
 
-        <div className="w-full max-w-5xl min-[375px]:max-w-6xl">
-          <div className="relative w-full aspect-video rounded-2xl bg-white/10 border border-white/15 shadow-sm overflow-hidden">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="relative w-full aspect-video rounded-2xl border-2 border-[#FACC15] bg-[#0C0A09]/15 shadow-sm overflow-hidden">
             <video
               src={VIDEO_URL}
               className="absolute inset-0 w-full h-full"
@@ -37,22 +33,6 @@ export function Pricing() {
             />
           </div>
         </div>
-
-        <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}`}
-          target="_blank"
-          rel="noreferrer"
-          className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-[#25D366] shadow-lg flex items-center justify-center hover:brightness-95 transition"
-          aria-label="Abrir WhatsApp"
-        >
-          <img
-            src="https://cdn.simpleicons.org/whatsapp/FFFFFF"
-            alt="WhatsApp"
-            className="w-7 h-7"
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
       </div>
     </section>
   );
