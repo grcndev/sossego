@@ -69,12 +69,11 @@ export function Hero() {
       </div>
 
       <div className="bg-[#3B0764] py-8">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            { val: "30 min", label: "tempo de resposta inicial" },
             { val: "+200", label: "crises gerenciadas" },
             { val: "96%", label: "reputação preservada" },
-            { val: "18 anos", label: "de experiência no mercado" },
+            { val: "10 anos", label: "de experiência no mercado" },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <p

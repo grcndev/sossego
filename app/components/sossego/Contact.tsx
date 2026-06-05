@@ -40,7 +40,7 @@ export function Contact() {
           </p>
           <div className="flex flex-col gap-4">
             <a
-              href="tel:+551140028922"
+              href="tel:+5582981462725"
               className="flex items-center gap-3 text-[#3B0764] font-semibold hover:text-[#6D28D9] transition-colors"
             >
               <span className="w-10 h-10 rounded-full bg-[#3B0764]/10 flex items-center justify-center text-lg">
@@ -55,7 +55,7 @@ export function Contact() {
               <span className="w-10 h-10 rounded-full bg-[#3B0764]/10 flex items-center justify-center text-lg">
                 ✉️
               </span>
-              crise@sossego.com.br
+              contato@sossego.com.br
             </a>
           </div>
         </div>

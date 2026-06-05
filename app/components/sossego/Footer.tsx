@@ -40,10 +40,10 @@ export function Footer() {
               {
                 title: "Contato",
                 links: [
-                  "(11) 4002-8922",
-                  "crise@sossego.com.br",
+                  "(82) 98146-2725",
+                  "contato@sossego.com.br",
+                  "Maceió, AL",
                   "São Paulo, SP",
-                  "Rio de Janeiro, RJ",
                 ],
               },
             ].map((col) => (
