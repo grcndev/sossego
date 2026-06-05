@@ -18,7 +18,7 @@ export function Footer() {
               </div>
             </a>
             <p className="text-white/40 text-sm leading-relaxed">
-              Gestão estratégica de crises corporativas
+              Gerenciamento de crises
             </p>
           </div>
 

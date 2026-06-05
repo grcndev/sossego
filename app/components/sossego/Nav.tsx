@@ -13,7 +13,7 @@ export function Nav() {
     { label: "Serviços", href: "/servicos" },
     { label: "Como Funciona", href: "/como-funciona" },
     { label: "Casos", href: "/casos" },
-    { label: "Planos", href: "/#planos" },
+    { label: "Missão", href: "/#mission" },
     { label: "Contato", href: "/contato" },
   ];
   return (
