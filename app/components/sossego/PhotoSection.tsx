@@ -25,8 +25,8 @@ export function PhotoSection() {
           style={{ fontFamily: "'Playfair Display', serif" }}
           className="text-3xl md:text-5xl font-black text-white max-w-3xl leading-tight mb-8"
         >
-          &quot;Uma crise bem gerenciada pode fortalecer mais a reputação do que
-          nunca tê-la vivido.&quot;
+         GERENCIAMENTO DE CRISES
+
         </blockquote>
         <p className="text-white/60 text-sm">
           Mariana Lessa — Fundadora & Diretora de Estratégia, Sossego
