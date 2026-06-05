@@ -1,5 +1,3 @@
-"use client";
-
 const SERVICES = [
   {
     icon: "shield",
@@ -153,11 +151,7 @@ function ServiceIcon({ name }: { name: (typeof SERVICES)[number]["icon"] }) {
 
 export function Services() {
   return (
-    <section
-      id="serviços"
-      style={{ fontFamily: "'Inter', sans-serif", background: "#fcf6f1" }}
-      className="py-28"
-    >
+    <section id="serviços" className="py-28 bg-[#fcf6f1]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
           <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-4">
@@ -168,6 +162,8 @@ export function Services() {
             className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight"
           >
            Gerenciamento de crises sem retórica
+          <h2 className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-lg leading-tight">
+            Controle total quando tudo sai do controle
           </h2>
         </div>
 
@@ -183,6 +179,8 @@ export function Services() {
               <h3
                 className="text-lg md:text-xl font-bold text-[#0C0A09] mb-3 tracking-tight group-hover:text-[#3B0764] transition-colors"
               >
+              <span className="text-3xl mb-5 block">{s.icon}</span>
+              <h3 className="text-xl font-bold text-[#0C0A09] mb-3 group-hover:text-[#3B0764] transition-colors">
                 {s.title}
               </h3>
               <p className="text-[#0C0A09]/60 leading-relaxed text-sm">

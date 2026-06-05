@@ -34,20 +34,13 @@ export function Contact() {
   }
 
   return (
-    <section
-      id="contato"
-      style={{ fontFamily: "'Inter', sans-serif", background: "#fcf6f1" }}
-      className="py-28"
-    >
+    <section id="contato" className="py-28 bg-[#fcf6f1]">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
           <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-6">
             Contato
           </span>
-          <h2
-            style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-4xl md:text-5xl font-black text-[#0C0A09] leading-tight mb-6"
-          >
+          <h2 className="text-4xl md:text-5xl font-black text-[#0C0A09] leading-tight mb-6">
             A crise não pode esperar. Nós também não.
           </h2>
           <p className="text-[#0C0A09]/60 leading-relaxed mb-8">
@@ -80,10 +73,7 @@ export function Contact() {
           {submitted ? (
             <div className="text-center py-10">
               <span className="text-5xl block mb-4">📨</span>
-              <h3
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-2xl font-black text-[#0C0A09] mb-2"
-              >
+              <h3 className="text-2xl font-black text-[#0C0A09] mb-2">
                 Enviar mensagem
               </h3>
               <p className="text-[#0C0A09]/60 text-sm">
@@ -118,10 +108,7 @@ export function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <h3
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-xl font-bold text-[#0C0A09] mb-2"
-              >
+              <h3 className="text-xl font-bold text-[#0C0A09] mb-2">
                 Fale com um especialista
               </h3>
 
@@ -147,7 +134,6 @@ export function Contact() {
                       setForm((f) => ({ ...f, [field.id]: e.target.value }))
                     }
                     className="w-full px-4 py-3 rounded-xl border border-[#0C0A09]/15 text-sm text-[#0C0A09] placeholder:text-[#0C0A09]/30 focus:outline-none focus:border-[#3B0764] bg-[#fcf6f1] transition-colors"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
                   />
                 </div>
               ))}
@@ -167,7 +153,6 @@ export function Contact() {
                   value={form.situacao}
                   onChange={(e) => setForm((f) => ({ ...f, situacao: e.target.value }))}
                   className="w-full px-4 py-3 rounded-xl border border-[#0C0A09]/15 text-sm text-[#0C0A09] placeholder:text-[#0C0A09]/30 focus:outline-none focus:border-[#3B0764] bg-[#fcf6f1] resize-none transition-colors"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
                 />
               </div>
 

@@ -1,5 +1,3 @@
-"use client";
-
 import { Nav } from "./Nav";
 import { Hero } from "./Hero";
 import { PhotoSection } from "./PhotoSection";
