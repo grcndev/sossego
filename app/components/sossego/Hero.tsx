@@ -1,23 +1,20 @@
+ "use client";
+
 const VIDEO_URL =
   "https://res.cloudinary.com/ds6qnvgbm/video/upload/v1780613265/14375214_1920_1080_30fps_fxv0yn.mp4";
 
 export function Hero() {
   return (
     <section className="pt-1 bg-[#3B0764]">
-      <div className="max-w-7xl mx-auto px-6 py-28">
-        <div className="flex flex-col items-center">
-          <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <h1
-            style={{ fontFamily: "'Playfair Display', serif" }}
-            className="text-5xl md:text-6xl font-black text-white leading-tight"
-          >
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-black text-white leading-tight">
-            Sossego
-          </h1>
-          <span className="inline-flex items-center self-center px-4 py-1.5 bg-[#FACC15] text-[#0C0A09] text-sm font-bold uppercase tracking-widest rounded">
-            Gerenciamento de Crise Institucional
-          </span>
+      <div className="max-w-7xl mx-auto px-6 py-24 md:py-28">
+        <div className="flex flex-col items-center justify-center gap-4 text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <h1 className="text-5xl md:text-6xl font-black text-white leading-tight">
+              Sossego
+            </h1>
+            <span className="inline-flex items-center self-center px-4 py-1.5 bg-[#FACC15] text-[#0C0A09] text-sm font-bold uppercase tracking-widest rounded">
+              Gerenciamento de Crise
+            </span>
           </div>
         </div>
 
