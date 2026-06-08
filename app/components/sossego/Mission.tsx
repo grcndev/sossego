@@ -10,10 +10,12 @@ export function Mission() {
             Missão
           </span>
           <h2 className="text-5xl md:text-6xl font-black text-[#0C0A09] leading-[1.05] mb-6">
-           Restaurar a integridade operacional onde ninguém percebeu a falha
+           Restaurar a integridade operacional
           </h2>
           <p className="text-lg text-[#0C0A09]/60 leading-relaxed mb-10 max-w-md">
-           Identificamos lacunas silenciosas, aplicamos disciplina técnica e recolocamos sua empresa em rota de crescimento estável.
+           Detectamos vulnerabilidades ocultas, aplicamos disciplina técnica e recolocamos sua empresa em rota de crescimento estável.
+
+Oferecemos atenção, prevenção e inteligência estratégica para decisões mais assertivas. 
           </p>
         </div>
 
