@@ -1,9 +1,10 @@
-import { Nav } from "../components/sossego/Nav";
+"use client";
 
+import { Nav } from "../components/sossego/Nav";
 import { Footer } from "../components/sossego/Footer";
 import { AboutUs } from "../components/sossego/AboutUs";
 
-export default function AboutUsPage() {
+export default function QuemSomosPage() {
   return (
     <div className="min-h-screen">
       <Nav />
@@ -14,3 +15,4 @@ export default function AboutUsPage() {
     </div>
   );
 }
+
