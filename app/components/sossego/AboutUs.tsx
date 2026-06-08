@@ -5,9 +5,9 @@ const WHATSAPP_NUMBER = "5582981462725";
 const PROMISE_IMG =
   "https://images.unsplash.com/photo-1638262052640-82e94d64664a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080";
 
-export function Cases() {
+export function AboutUs() {
   return (
-    <section id="casos" className="py-28 bg-[#fcf6f1]">
+    <section id="quem-somos" className="py-28 bg-[#fcf6f1]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <div>
@@ -22,8 +22,7 @@ export function Cases() {
 
             <p className="text-[#0C0A09]/70 leading-relaxed text-base md:text-lg">
               A Sossego atua com discrição máxima e respeito absoluto aos dados
-              dos nossos clientes. Nossa equipe trabalha exclusivamente no
-              ambiente do contratante e, ao término do contrato, não mantemos
+              dos nossos clientes. Ao término do contrato, não mantemos
               qualquer cópia dos dados tratados, salvo quando a retenção for
               exigida por obrigação legal ou regulatória (como prazos fiscais,
               contábeis ou para defesa em processos), hipótese na qual os dados

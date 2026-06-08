@@ -12,8 +12,8 @@ export function Nav() {
   const links = [
     { label: "Serviços", href: "/servicos" },
     { label: "Como Funciona", href: "/como-funciona" },
-    { label: "Casos", href: "/casos" },
     { label: "Missão", href: "/mission" },
+    { label: "Quem Somos", href: "/quem-somos" },
     { label: "Contato", href: "/contato" },
   ];
   return (
