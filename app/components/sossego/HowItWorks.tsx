@@ -11,8 +11,13 @@ const STEPS = [
   },
   {
     num: "03",
-    title: "Execução e Controle da Narrativa",
-    desc: "Implementamos comunicados, gerenciamos porta-vozes e monitoramos cada desdobramento em tempo real.",
+    title: "Execução, Monitoramento e Suporte à Decisão",
+    desc: "Implementamos comunicados, gerenciamos porta-vozes e monitoramos desdobramentos em tempo real. Nossa equipe fornece dados e perspectivas para apoiar cada decisão sua.",
+  },
+  {
+    num: "04",
+    title: "Pós-crise e Decisão Estratégica",
+    desc: "Entregamos dados, cenários e perspectivas para que você tome a melhor decisão — para seus colaboradores, seu negócio e você.",
   },
 ];
 
@@ -24,6 +29,11 @@ export function HowItWorks() {
           <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-4">
             Como funciona
           </span>
+          <p className="text-[#0C0A09]/60 text-sm md:text-base max-w-3xl mx-auto mb-4">
+            Na Sossego, oferecemos atenção e prevenção a crises financeiras,
+            produtivas ou de saúde. Quando a crise já ocorreu, nosso fluxo de
+            contenção é acionado em minutos.
+          </p>
           <h2 className="text-4xl md:text-5xl font-black text-[#0C0A09] max-w-2xl mx-auto leading-tight">
             Do acionamento ao controle em horas
           </h2>
