@@ -25,8 +25,10 @@ export function Footer({ bg = "#20063C" }: { bg?: string }) {
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-[clamp(32px,5vw,60px)]">
           <div>
-            <Link href="/" className="flex items-baseline gap-2.5">
-              <Image src={logo} alt="Sossego" className="w-11 h-11 rounded-full" />
+            <Link href="/" className="flex items-center gap-2.5">
+              <span className="w-11 h-11 rounded-full bg-[#FAF5EF]/90 flex items-center justify-center p-1.5">
+                <Image src={logo} alt="Sossego" className="w-full h-full object-contain" />
+              </span>
               <span className="font-serif text-[26px]">Sossego</span>
             </Link>
             <p className="mt-2.5 ml-[14px] text-[12.5px] text-[#FAF5EF]/50">
@@ -54,10 +56,12 @@ export function Footer({ bg = "#20063C" }: { bg?: string }) {
               Contato
             </span>
             <a
-              href="tel:+5582981462725"
+              href="https://wa.me/5582991213193"
+      target="_blank"
+      rel="noopener noreferrer"
               className="text-[13.5px] text-[#FAF5EF]/80 hover:text-[#FAF5EF] transition-colors"
             >
-              (82) 98146-2725
+              Whatsapp
             </a>
             <a
               href="mailto:sossego@sossegoecia.com.br"

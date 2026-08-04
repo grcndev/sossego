@@ -51,7 +51,9 @@ export function Nav() {
         })}
         {isContato ? (
           <a
-            href="tel:+5582981462725"
+            href="https://wa.me/5582991213193"
+      target="_blank"
+      rel="noopener noreferrer"
             className="flex items-center gap-2.5 px-5 py-[11px] rounded-full bg-[#F2CE20] text-[#20063C] hover:-translate-y-0.5 transition-transform"
           >
             Conversar agora
@@ -90,7 +92,9 @@ export function Nav() {
           ))}
           {isContato ? (
             <a
-              href="tel:+5582981462725"
+              href="https://wa.me/5582991213193"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2.5 bg-[#F2CE20] text-[#20063C] text-sm rounded-full text-center"
               onClick={() => setMenuOpen(false)}
             >

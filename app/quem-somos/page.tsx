@@ -7,18 +7,21 @@ import { Footer } from "../components/sossego/Footer";
 export default function QuemSomosPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#FAF5EF]">
-      <PageHeader
-        eyebrow="Quem somos"
-        lines={[
-          "Discrição máxima",
-          <>
-            e <em className="italic text-[#F2CE20]">parceria</em>.
-          </>,
-        ]}
-        subtitle="Uma equipe discreta e eficiente, que trata informação sensível com controle total, clareza contratual e segurança do início ao fim."
-        bg="#171314"
-        gradient="single"
-      />
+      
+  <PageHeader
+    eyebrow="Quem somos"
+    lines={[
+      // eslint-disable-next-line react/jsx-key
+      <span className="inline-block pb-1">Discrição máxima</span>,
+      <>
+        e <em className="italic text-[#F2CE20]">parceria</em>.
+      </>,
+    ]}
+    subtitle="Uma equipe discreta e eficiente, que trata informação sensível com controle total, clareza contratual e segurança do início ao fim."
+    bg="#171314"
+    gradient="single"
+  />
+
       <Garantia />
       <Historico />
       <section className="bg-[#FAF5EF] px-[clamp(20px,4vw,56px)] py-[clamp(84px,10vw,150px)]">

@@ -1,9 +1,10 @@
 const EMAIL_TO = "sossego@sossegoecia.com.br";
 
 const CANAIS = [
-  { label: "Telefone", value: "(82) 98146-2725", href: "tel:+5582981462725", arrow: "↗" },
+  { label: "Whatsapp", value: "Iniciar conversa",  href:"https://wa.me/5582991213193", arrow: "↗" },
   { label: "E-mail", value: EMAIL_TO, href: `mailto:${EMAIL_TO}`, arrow: "↗" },
-  { label: "Retorno", value: "Em até 30 minutos", href: "tel:+5582981462725", arrow: "→" },
+  { label: "Retorno", value: "Em até 30 minutos",  href:"https://wa.me/5582991213193"
+  , arrow: "→" },
 ];
 
 export function Contact() {
@@ -78,7 +79,7 @@ export function Contact() {
 
         <div className="reveal max-w-[1280px] mx-auto mt-[clamp(30px,3.6vw,48px)] flex flex-wrap items-center gap-x-7 gap-y-3.5">
           <a
-            href="tel:+5582981462725"
+            href="tel:+5582991213193"
             className="inline-flex items-center gap-[11px] px-[30px] py-[17px] rounded-full bg-[#F2CE20] text-[#20063C] text-[15px] tracking-[.04em] transition-transform duration-[450ms] hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(242,206,32,.55)]"
           >
             Conversar agora <span className="text-[16px]">→</span>

@@ -16,7 +16,7 @@ export function Invite({ heading, ctaLabel }: { heading: ReactNode; ctaLabel: st
             {ctaLabel} <span className="text-[15px]">→</span>
           </Link>
           {/* <a
-            href="tel:+5582981462725"
+            href="tel:+5582991213193"
             className="text-[13.5px] text-[#FAF5EF]/75 border-b border-[#FAF5EF]/28 pb-[3px] hover:text-[#FAF5EF] transition-colors"
           >
             (82) 98146-2725

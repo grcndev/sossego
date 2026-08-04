@@ -1,7 +1,7 @@
 export function EmergencyBar() {
   return (
     <a
-      href="https://wa.me/5582981462725"
+      href="https://wa.me/5582991213193"
       target="_blank"
       rel="noopener noreferrer"
       data-emergency-bar

@@ -49,7 +49,12 @@ export function Hero() {
   </span>
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
     <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.74s_both]">
-      ajudando a <em className="italic text-[#F2CE20]">navegar</em>
+      ajudando você
+    </span>
+  </span>
+  <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
+    <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.74s_both]">
+      a <em className="italic text-[#F2CE20]">navegar</em>
     </span>
   </span>
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
