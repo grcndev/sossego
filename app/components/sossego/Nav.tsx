@@ -1,84 +1,112 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import logo from "../../assets/logo.png";
 
-const WHATSAPP_NUMBER = "5582981462725";
+const links = [
+  { label: "Serviços", href: "/servicos" },
+  { label: "Como Funciona", href: "/como-funciona" },
+  { label: "Quem Somos", href: "/quem-somos" },
+];
 
 export function Nav() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const links = [
-    { label: "Serviços", href: "/servicos" },
-    { label: "Como Funciona", href: "/como-funciona" },
-    { label: "Missão", href: "/mission" },
-    { label: "Quem Somos", href: "/quem-somos" },
-    { label: "Contato", href: "/contato" },
-  ];
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fcf6f1]/95 backdrop-blur-sm border-b border-[#0C0A09]/8">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-           <Image src={logo} alt="Sossego" className="w-16 h-16 rounded-full" />
-        </Link>
+  const isContato = pathname === "/contato";
 
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((item) => (
+  return (
+    <header
+      data-nav
+      style={{
+        background: "transparent",
+        color: "#FAF5EF",
+        borderColor: "transparent",
+        padding: "22px clamp(20px,4vw,56px)",
+      }}
+      className="fixed top-0 left-0 right-0 z-[60] flex items-center justify-between gap-6 border-b transition-[padding,color,background,border-color] duration-500"
+    >
+      <Link href="/" className="flex items-center gap-2">
+        <Image src={logo} alt="Sossego" className="w-11 h-11 rounded-full" />
+      </Link>
+
+      <nav className="hidden md:flex items-center gap-[clamp(18px,2.4vw,38px)] text-[12.5px] tracking-[.06em]">
+        {links.map((item) => {
+          const active = pathname === item.href;
+          return (
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm text-[#0C0A09]/70 hover:text-[#3B0764] transition-colors"
+              className={
+                active
+                  ? "opacity-100 border-b border-[#F2CE20] pb-0.5"
+                  : "opacity-70 hover:opacity-100 transition-opacity"
+              }
             >
               {item.label}
             </Link>
-          ))}
-        </div>
-
-        <div className="hidden md:flex items-center gap-3">
+          );
+        })}
+        {isContato ? (
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-[#3B0764] text-white text-sm rounded-lg hover:bg-[#6D28D9] transition-colors"
+            href="tel:+5582981462725"
+            className="flex items-center gap-2.5 px-5 py-[11px] rounded-full bg-[#F2CE20] text-[#20063C] hover:-translate-y-0.5 transition-transform"
+          >
+            Conversar agora
+          </a>
+        ) : (
+          <Link
+            href="/contato"
+            className="flex items-center gap-2.5 px-5 py-[11px] rounded-full bg-[#35095F] text-[#FAF5EF] hover:bg-[#4A0E86] transition-colors"
           >
             Fale Conosco
-          </a>
-        </div>
+          </Link>
+        )}
+      </nav>
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden p-2 text-[#0C0A09]"
-          aria-label="Menu"
-        >
-          <div className="w-5 h-0.5 bg-current mb-1.5" />
-          <div className="w-5 h-0.5 bg-current mb-1.5" />
-          <div className="w-5 h-0.5 bg-current" />
-        </button>
-      </div>
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className="md:hidden p-2"
+        aria-label="Menu"
+      >
+        <div className="w-5 h-0.5 bg-current mb-1.5" />
+        <div className="w-5 h-0.5 bg-current mb-1.5" />
+        <div className="w-5 h-0.5 bg-current" />
+      </button>
 
       {menuOpen && (
-        <div className="md:hidden bg-[#fcf6f1] border-t border-[#0C0A09]/8 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#FAF5EF] border-t border-[#171314]/8 px-6 py-4 flex flex-col gap-4">
           {links.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm text-[#0C0A09]/70"
+              className={`text-sm ${pathname === item.href ? "text-[#4A0E86]" : "text-[#171314]/70"}`}
               onClick={() => setMenuOpen(false)}
             >
               {item.label}
             </Link>
           ))}
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-[#3B0764] text-white text-sm rounded-lg text-center"
-          >
-            Falar com especialista
-          </a>
+          {isContato ? (
+            <a
+              href="tel:+5582981462725"
+              className="px-5 py-2.5 bg-[#F2CE20] text-[#20063C] text-sm rounded-full text-center"
+              onClick={() => setMenuOpen(false)}
+            >
+              Conversar agora
+            </a>
+          ) : (
+            <Link
+              href="/contato"
+              className="px-5 py-2.5 bg-[#35095F] text-[#FAF5EF] text-sm rounded-full text-center"
+              onClick={() => setMenuOpen(false)}
+            >
+              Fale Conosco
+            </Link>
+          )}
         </div>
       )}
-    </nav>
+    </header>
   );
 }

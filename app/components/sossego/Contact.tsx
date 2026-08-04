@@ -1,171 +1,93 @@
-"use client";
+const EMAIL_TO = "sossego@sossegoecia.com.br";
 
-import { useState } from "react";
-import type { FormEvent } from "react";
-import { Mail, Phone } from "lucide-react";
-
-const WHATSAPP_NUMBER = "5582981462725";
-const EMAIL_TO = "contato@sossego.com.br";
+const CANAIS = [
+  { label: "Telefone", value: "(82) 98146-2725", href: "tel:+5582981462725", arrow: "↗" },
+  { label: "E-mail", value: EMAIL_TO, href: `mailto:${EMAIL_TO}`, arrow: "↗" },
+  { label: "Retorno", value: "Em até 30 minutos", href: "tel:+5582981462725", arrow: "→" },
+];
 
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-  const [message, setMessage] = useState("");
-  const [form, setForm] = useState({
-    nome: "",
-    empresa: "",
-    telefone: "",
-    situacao: "",
-  });
-
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-    const msg = [
-      "Solicitação de atendimento (site Sossego)",
-      "",
-      `Nome: ${form.nome}`,
-      `Empresa: ${form.empresa}`,
-      `Telefone: ${form.telefone}`,
-      "",
-      "Situação:",
-      form.situacao,
-    ].join("\n");
-    setMessage(msg);
-    setSubmitted(true);
-  }
-
   return (
-    <section id="contato" className="py-28 bg-[#fcf6f1]">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <span className="inline-block px-3 py-1 bg-[#FACC15] text-[#0C0A09] text-xs font-bold uppercase tracking-widest rounded mb-6">
-            Contato
-          </span>
-          <h2 className="text-4xl md:text-5xl font-black text-[#0C0A09] leading-tight mb-6">
-            A crise não pode esperar. Nós também não.
-          </h2>
-          <p className="text-[#0C0A09]/60 leading-relaxed mb-8">
-            Preencha o formulário ou ligue diretamente para nossa linha de
-            emergência. Um especialista retornará em até 30 minutos.
-          </p>
-          <div className="flex flex-col gap-4">
-            <a
-              href="tel:+5582981462725"
-              className="flex items-center gap-3 text-[#3B0764] font-semibold hover:text-[#6D28D9] transition-colors"
-            >
-              <span className="h-12 w-12 rounded-full bg-[#3B0764]/10 flex items-center justify-center">
-                <Phone className="h-[22px] w-[22px] text-[#3B0764]" />
-              </span>
-              (82) 98146-2725
-            </a>
-            <a
-              href={`mailto:${EMAIL_TO}`}
-              className="flex items-center gap-3 text-[#3B0764] font-semibold hover:text-[#6D28D9] transition-colors"
-            >
-              <span className="h-12 w-12 rounded-full bg-[#3B0764]/10 flex items-center justify-center">
-                <Mail className="h-[22px] w-[22px] text-[#3B0764]" />
-              </span>
-              contato@sossego.com.br
-            </a>
+    <>
+      <section className="relative pt-[clamp(150px,18vh,230px)] pb-[clamp(70px,8vw,110px)] px-[clamp(20px,4vw,56px)]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="flex items-center gap-3.5 [animation:fadeIn_1.1s_ease_.05s_both]">
+            <span className="h-px w-11 bg-[#F2CE20] block" />
+            <span className="text-[10.5px] tracking-[.3em] uppercase text-[#FAF5EF]/85">
+              Contato
+            </span>
           </div>
+
+<h1
+  className="font-serif font-normal text-[clamp(36px,5.6vw,88px)] leading-[1.08] tracking-[-.016em] mt-[clamp(26px,3.4vw,50px)] max-w-[19ch]"
+  style={{ textShadow: "0 2px 40px rgba(20,4,32,.35)" }}
+>
+  {/* Linha 1: Com padding inferior (pb) e margem compensatória para não cortar o "g" */}
+  <span className="flex items-baseline gap-[0.25em] overflow-hidden pb-[0.12em] -mb-[0.12em]">
+    <span className="block [animation:riseIn_1.25s_cubic-bezier(.2,.75,.15,1)_.15s_both]">
+      Seu
+    </span>
+    <span className="block [animation:riseIn_1.25s_cubic-bezier(.2,.75,.15,1)_.43s_both]">
+      <em className="italic text-[#F2CE20]">sossego</em>
+    </span>
+  </span>
+
+  {/* Linha 2 */}
+  <span className="block overflow-hidden pb-[0.08em] -mb-[0.08em]">
+    <span className="block [animation:riseIn_1.25s_cubic-bezier(.2,.75,.15,1)_.29s_both]">
+      a um contato
+    </span>
+  </span>
+
+  {/* Linha 3 */}
+  <span className="block overflow-hidden pb-[0.1em]">
+    <span className="block [animation:riseIn_1.25s_cubic-bezier(.2,.75,.15,1)_.29s_both]">
+      de distância.
+    </span>
+  </span>
+</h1>
+
+          <p
+            className="mt-[clamp(30px,3.6vw,48px)] max-w-[48ch] text-[clamp(17px,1.15vw,18px)] leading-[1.95] text-[#FAF5EF]/85 text-pretty"
+            style={{ animation: "fadeIn 1.3s ease .8s both" }}
+          >
+            A Sossego & Cia garante atendimento, e todas as etapas de contatos, com nossa equipe pronta para te atender.
+            {}
+          </p>
+        </div>
+      </section>
+
+      <section className="relative px-[clamp(20px,4vw,56px)] pb-[clamp(80px,9vw,130px)]">
+        <div className="max-w-[1280px] mx-auto border-t border-[#FAF5EF]/22">
+          {CANAIS.map((c) => (
+            <a
+              key={c.label}
+              href={c.href}
+              className="reveal grid grid-cols-[auto_1fr_auto] items-center gap-x-[clamp(16px,3vw,44px)] py-[clamp(26px,3.4vw,44px)] border-b border-[#FAF5EF]/22 transition-[background,padding-left] duration-500 hover:bg-[#FAF5EF]/[0.07] hover:pl-[18px]"
+            >
+              <span className="text-[13px] tracking-[.24em] uppercase text-[#FAF5EF]/85 min-w-[9ch]">
+                {c.label}
+              </span>
+              <span className="font-serif text-[clamp(24px,3.6vw,54px)] leading-[1.06] tracking-[-.014em]">
+                {c.value}
+              </span>
+              <span className="text-lg text-[#FAF5EF]/85">{c.arrow}</span>
+            </a>
+          ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#0C0A09]/8">
-          {submitted ? (
-            <div className="text-center py-10">
-              <span className="text-5xl block mb-4">📨</span>
-              <h3 className="text-2xl font-black text-[#0C0A09] mb-2">
-                Enviar mensagem
-              </h3>
-              <p className="text-[#0C0A09]/60 text-sm">
-                Escolha o canal. A mensagem já vai pronta com os dados do formulário.
-              </p>
-
-              <div className="mt-8 grid gap-3">
-                <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-4 bg-[#25D366] text-white rounded-xl font-semibold hover:brightness-105 transition-colors text-sm text-center"
-                >
-                  Enviar por WhatsApp
-                </a>
-                <a
-                  href={`mailto:${EMAIL_TO}?subject=${encodeURIComponent(
-                    "Solicitação de atendimento — Sossego"
-                  )}&body=${encodeURIComponent(message)}`}
-                  className="w-full py-4 border border-[#0C0A09]/15 text-[#0C0A09] rounded-xl font-semibold hover:border-[#3B0764] hover:text-[#3B0764] transition-colors text-sm text-center"
-                >
-                  Enviar por e-mail
-                </a>
-                <button
-                  type="button"
-                  onClick={() => setSubmitted(false)}
-                  className="w-full py-4 text-[#0C0A09]/60 rounded-xl font-semibold hover:text-[#0C0A09] transition-colors text-sm"
-                >
-                  Voltar e editar
-                </button>
-              </div>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <h3 className="text-xl font-bold text-[#0C0A09] mb-2">
-                Fale com um especialista
-              </h3>
-
-              {[
-                { id: "nome", label: "Nome completo", type: "text", placeholder: "Seu nome" },
-                { id: "empresa", label: "Empresa", type: "text", placeholder: "Nome da empresa" },
-                { id: "telefone", label: "Telefone", type: "tel", placeholder: "(11) 9 9999-9999" },
-              ].map((field) => (
-                <div key={field.id}>
-                  <label
-                    htmlFor={field.id}
-                    className="block text-xs font-bold uppercase tracking-widest text-[#0C0A09]/60 mb-1.5"
-                  >
-                    {field.label}
-                  </label>
-                  <input
-                    id={field.id}
-                    type={field.type}
-                    placeholder={field.placeholder}
-                    required
-                    value={form[field.id as keyof typeof form]}
-                    onChange={(e) =>
-                      setForm((f) => ({ ...f, [field.id]: e.target.value }))
-                    }
-                    className="w-full px-4 py-3 rounded-xl border border-[#0C0A09]/15 text-sm text-[#0C0A09] placeholder:text-[#0C0A09]/30 focus:outline-none focus:border-[#3B0764] bg-[#fcf6f1] transition-colors"
-                  />
-                </div>
-              ))}
-
-              <div>
-                <label
-                  htmlFor="situacao"
-                  className="block text-xs font-bold uppercase tracking-widest text-[#0C0A09]/60 mb-1.5"
-                >
-                  Descreva brevemente a situação
-                </label>
-                <textarea
-                  id="situacao"
-                  placeholder="O que está acontecendo? Qual a urgência?"
-                  rows={3}
-                  required
-                  value={form.situacao}
-                  onChange={(e) => setForm((f) => ({ ...f, situacao: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl border border-[#0C0A09]/15 text-sm text-[#0C0A09] placeholder:text-[#0C0A09]/30 focus:outline-none focus:border-[#3B0764] bg-[#fcf6f1] resize-none transition-colors"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full py-4 bg-[#3B0764] text-white rounded-xl font-semibold hover:bg-[#6D28D9] transition-colors text-sm"
-              >
-                Solicitar atendimento
-              </button>
-            </form>
-          )}
+        <div className="reveal max-w-[1280px] mx-auto mt-[clamp(30px,3.6vw,48px)] flex flex-wrap items-center gap-x-7 gap-y-3.5">
+          <a
+            href="tel:+5582981462725"
+            className="inline-flex items-center gap-[11px] px-[30px] py-[17px] rounded-full bg-[#F2CE20] text-[#20063C] text-[15px] tracking-[.04em] transition-transform duration-[450ms] hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-18px_rgba(242,206,32,.55)]"
+          >
+            Conversar agora <span className="text-[16px]">→</span>
+          </a>
+          <span className="text-sm tracking-[.02em] text-[#FAF5EF]/85">
+            Linha aberta 24 horas, todos os dias.
+          </span>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -1,115 +1,77 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import logo from "../../assets/logo.png";
 
-export function Footer() {
+const PAGES = [
+  { label: "Início", href: "/" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Como Funciona", href: "/como-funciona" },
+  { label: "Quem Somos", href: "/quem-somos" },
+  { label: "Contato", href: "/contato" },
+];
+
+export function Footer({ bg = "#20063C" }: { bg?: string }) {
+  const pathname = usePathname();
+  const pages = PAGES.filter((p) => p.href !== pathname);
+
   return (
-    <footer className="bg-[#0C0A09] py-10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between gap-10 mb-12">
-          <div className="max-w-xs">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <div className="inline-flex rounded-full bg-[#fcf6f1] p-1">
-                <Image
-                  src={logo}
-                  alt="Sossego"
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full"
-                />
-              </div>
-              <div className="leading-tight">
-                <p className="text-white font-black text-xl">
-                  Sossego
-                </p>
-                <p className="text-white/50 text-sm">Gerenciamento de risco</p>
-              </div>
+    <footer
+      style={{ background: bg }}
+      className="text-[#FAF5EF] pt-[clamp(60px,7vw,92px)] px-[clamp(20px,4vw,56px)] pb-8"
+    >
+      <div className="max-w-[1280px] mx-auto">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-[clamp(32px,5vw,60px)]">
+          <div>
+            <Link href="/" className="flex items-baseline gap-2.5">
+              <Image src={logo} alt="Sossego" className="w-11 h-11 rounded-full" />
+              <span className="font-serif text-[26px]">Sossego</span>
             </Link>
+            <p className="mt-2.5 ml-[14px] text-[12.5px] text-[#FAF5EF]/50">
+              Gerenciamento de crise
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Serviços",
-                links: [
-                  "Gestão de Crise",
-                  "Comunicação Estratégica",
-                  "Monitoramento",
-                  "Treinamentos",
-                ],
-              },
-              {
-                title: "Empresa",
-                links: ["Sobre nós", "Equipe", "Cases", "Blog"],
-              },
-              {
-                title: "Contato",
-                links: [
-                  "(82) 98146-2725",
-                  "contato@sossego.com.br",
-                  "Maceió, AL",
-                  "São Paulo, SP",
-                ],
-              },
-            ].map((col) => (
-              <div key={col.title}>
-                <p className="text-white text-xs font-bold uppercase tracking-widest mb-4">
-                  {col.title}
-                </p>
-                <ul className="flex flex-col gap-2">
-                  {col.title === "Contato" ? (
-                    <>
-                      <li>
-                        <a
-                          href="tel:+5582981462725"
-                          className="text-white/40 text-sm hover:text-white/80 transition-colors"
-                        >
-                          (82) 98146-2725
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="mailto:contato@sossego.com.br"
-                          className="text-white/40 text-sm hover:text-white/80 transition-colors"
-                        >
-                          contato@sossego.com.br
-                        </a>
-                      </li>
-                      <li>
-                        <span className="text-white/40 text-sm">Maceió, AL</span>
-                      </li>
-                      <li>
-                        <span className="text-white/40 text-sm">São Paulo, SP</span>
-                      </li>
-                    </>
-                  ) : (
-                    col.links.map((l) => (
-                      <li key={l}>
-                        <span className="text-white/40 text-sm hover:text-white/80 transition-colors">
-                          {l}
-                        </span>
-                      </li>
-                    ))
-                  )}
-                </ul>
-              </div>
+          <div className="flex flex-col gap-[13px]">
+            <span className="text-[10px] tracking-[.26em] uppercase text-[#FAF5EF]/45">
+              Páginas
+            </span>
+            {pages.map((p) => (
+              <Link
+                key={p.href}
+                href={p.href}
+                className="text-[13.5px] text-[#FAF5EF]/80 hover:text-[#FAF5EF] transition-colors"
+              >
+                {p.label}
+              </Link>
             ))}
+          </div>
+
+          <div className="flex flex-col gap-[13px]">
+            <span className="text-[10px] tracking-[.26em] uppercase text-[#FAF5EF]/45">
+              Contato
+            </span>
+            <a
+              href="tel:+5582981462725"
+              className="text-[13.5px] text-[#FAF5EF]/80 hover:text-[#FAF5EF] transition-colors"
+            >
+              (82) 98146-2725
+            </a>
+            <a
+              href="mailto:sossego@sossegoecia.com.br"
+              className="text-[13.5px] text-[#FAF5EF]/80 hover:text-[#FAF5EF] transition-colors"
+            >
+              sossego@sossegoecia.com.br
+            </a>
+            <span className="text-[13.5px] text-[#FAF5EF]/55">Atendimento 24/7</span>
           </div>
         </div>
 
-        <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row justify-between gap-4">
-          <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} Sossego Gestão de Crises Ltda. Todos os
-            direitos reservados.
-          </p>
-          <div className="flex gap-6">
-            {["Política de Privacidade", "Termos de Uso"].map((l) => (
-              <span
-                key={l}
-                className="text-white/30 text-xs hover:text-white/60 cursor-pointer transition-colors"
-              >
-                {l}
-              </span>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-between gap-3.5 mt-[clamp(44px,6vw,72px)] pt-[24px] border-t border-[#FAF5EF]/13 text-[11.5px] text-[#FAF5EF]/45">
+          <span>© {new Date().getFullYear()} Sossego. Todos os direitos reservados.</span>
+          <span>Confidencialidade contratual em toda atuação.</span>
         </div>
       </div>
     </footer>

@@ -1,16 +1,5 @@
-import { Nav } from "../components/sossego/Nav";
+import { redirect } from "next/navigation";
 
-import { Footer } from "../components/sossego/Footer";
-import { AboutUs } from "../components/sossego/AboutUs";
-
-export default function AboutUsPage() {
-  return (
-    <div className="min-h-screen">
-      <Nav />
-      <main className="pt-10">
-        <AboutUs />
-      </main>
-      <Footer />
-    </div>
-  );
+export default function CasosPage() {
+  redirect("/quem-somos");
 }
