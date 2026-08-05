@@ -34,7 +34,7 @@ export function Hero() {
         <div className="flex items-center gap-3.5 [animation:fadeIn_1.6s_ease_.5s_both]">
           <span className="h-px w-11 bg-[#F2CE20] block" />
           <span className="text-xs tracking-[.3em] uppercase text-[#FAF5EF]/72 font-bold">
-            Gerenciamento de crise
+            Consultoria e Gerenciamento de crise
           </span>
         </div>
 
@@ -49,17 +49,17 @@ export function Hero() {
   </span>
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
     <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.74s_both]">
-      ajudando você
+     para sua empresa
     </span>
   </span>
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
     <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.74s_both]">
-      a <em className="italic text-[#F2CE20]">navegar</em>
+     <em className="italic text-[#F2CE20]">navegar</em>
     </span>
   </span>
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
     <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.88s_both]">
-      perante a crise.
+      durante a crise.
     </span>
   </span>
 </h1>
