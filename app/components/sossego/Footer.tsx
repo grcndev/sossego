@@ -7,7 +7,8 @@ import logo from "../../assets/logo.png";
 
 const PAGES = [
   { label: "Início", href: "/" },
-  { label: "Serviços", href: "/servicos" },
+  { label: "Consultoria", href: "/consultoria" },
+  { label: "Gestão de Crise", href: "/gestao" },
   { label: "Como Funciona", href: "/como-funciona" },
   { label: "Quem Somos", href: "/quem-somos" },
   { label: "Contato", href: "/contato" },
@@ -29,10 +30,10 @@ export function Footer({ bg = "#20063C" }: { bg?: string }) {
               <span className="w-11 h-11 rounded-full bg-[#FAF5EF]/90 flex items-center justify-center p-1.5">
                 <Image src={logo} alt="Sossego" className="w-full h-full object-contain" />
               </span>
-              <span className="font-serif text-[26px]">Sossego</span>
+              <span className="font-serif text-[26px]">Sossego & Cia</span>
             </Link>
             <p className="mt-2.5 ml-[14px] text-[12.5px] text-[#FAF5EF]/50">
-              Gerenciamento de crise
+              Consultoria e gestão de crise
             </p>
           </div>
 

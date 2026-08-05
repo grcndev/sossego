@@ -3,24 +3,30 @@ import Link from "next/link";
 const PAGINAS = [
   {
     n: "01",
-    title: "Serviços",
-    sub: "O mapa da crise e onde entramos nele.",
-    href: "/servicos",
+    title: "Consultoria",
+    sub: "Ordem antes do imprevisto.",
+    href: "/consultoria",
   },
   {
     n: "02",
+    title: "Gestão de Crise",
+    sub: "O mapa da crise e onde entramos nele.",
+    href: "/gestao",
+  },
+  {
+    n: "03",
     title: "Como Funciona",
     sub: "Do primeiro contato ao controle, em quatro movimentos.",
     href: "/como-funciona",
   },
   {
-    n: "03",
+    n: "04",
     title: "Quem Somos",
     sub: "Discrição máxima, parceria e histórico de vida.",
     href: "/quem-somos",
   },
   {
-    n: "04",
+    n: "05",
     title: "Contato",
     sub: "Atendimento 24/7 e retorno em até 30 minutos.",
     href: "/contato",
