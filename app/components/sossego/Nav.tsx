@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import logo from "../../assets/logo.png";
 
 const links = [
-  { label: "Serviços", href: "/servicos" },
+  { label: "Consultoria", href: "/consultoria" },
+  { label: "Gestão de Crise", href: "/gestao" },
   { label: "Como Funciona", href: "/como-funciona" },
   { label: "Quem Somos", href: "/quem-somos" },
 ];

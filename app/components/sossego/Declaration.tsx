@@ -35,7 +35,7 @@ export function Declaration() {
 
         <div className="mt-[clamp(34px,4vw,58px)] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[clamp(32px,5vw,88px)] items-end">
           <h2 className="reveal font-serif font-normal text-[clamp(32px,4.4vw,72px)] leading-[1.02] tracking-[-.016em] m-0 max-w-[15ch]">
-            Atenção antes. Suporte durante. Presença <em className="italic text-[#F2CE20]">depois</em>.
+            Atenção <em className="italic text-[#F2CE20]">antes</em>. Suporte <em className="italic text-[#F2CE20]">durante</em>. Presença <em className="italic text-[#F2CE20]">depois</em>.
           </h2>
           <p className="reveal m-0 max-w-[42ch] text-[clamp(14.5px,1.05vw,16.5px)] leading-[2] text-[#FAF5EF]/70 text-pretty">
             Dados e perspectivas para que a decisão seja a melhor possível para seus

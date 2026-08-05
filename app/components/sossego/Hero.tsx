@@ -34,7 +34,7 @@ export function Hero() {
         <div className="flex items-center gap-3.5 [animation:fadeIn_1.6s_ease_.5s_both]">
           <span className="h-px w-11 bg-[#F2CE20] block" />
           <span className="text-xs tracking-[.3em] uppercase text-[#FAF5EF]/72 font-bold">
-            Consultoria e Gerenciamento de crise
+            Consultoria e Gestão de crise
           </span>
         </div>
 
