@@ -1,30 +1,29 @@
 const FRENTES = [
  
-  
   {
     n: "01",
-    title: "Processos e rotina",
-    body: "Fluxos, responsabilidades e registros, onde o problema pequeno costuma nascer antes de virar crise.",
+    title: "Linguagem e Narrativa",
+    body: "Revisão e alinhamento de propostas, materiais institucionais e comunicados. Ajuste fino de linguagem e tom de voz para garantir que a empresa transmita o valor correto ao mercado e evite ruídos de percepção.",
   },
-  {
+   {
     n: "02",
-    title: "Estrutura e pessoas",
-    body: "Ética, saúde mental e clima interno: a barreira mais barata e mais eficiente contra crises.",
-  },
-  {
-    n: "03",
     title: "Segunda opinião",
     body: "Dados e perspectivas de quem está fora do dia a dia, para uma decisão sensível não ser tomada sozinha.",
   },
   {
+    n: "03",
+    title: "Processos e rotina",
+    body: "Fluxos, responsabilidades e registros, onde o problema pequeno costuma nascer antes de virar crise.",
+  },
+  {
     n: "04",
-    title: "Acompanhamento contínuo",
-    body: "Revisões periódicas e alerta de prazos e validades, para que nada vença sem aviso.",
+    title: "Estrutura e pessoas",
+    body: "Ética, saúde mental e clima interno: a barreira mais barata e mais eficiente contra crises.",
   },
   {
     n: "05",
-    title: "Documentos e comunicados",
-    body: "Revisão de contratos, propostas e comunicados internos e externos, com atenção linguística ao que cada palavra compromete.",
+    title: "Acompanhamento contínuo",
+    body: "Revisões periódicas e alerta de prazos e validades, para que nada vença sem aviso.",
   },
    {
     n: "06",
