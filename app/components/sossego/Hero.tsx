@@ -34,7 +34,7 @@ export function Hero() {
         <div className="flex items-center gap-3.5 [animation:fadeIn_1.6s_ease_.5s_both]">
           <span className="h-px w-11 bg-[#F2CE20] block" />
           <span className="text-xs tracking-[.3em] uppercase text-[#FAF5EF]/72 font-bold">
-            Consultoria e Gestão de crise
+            Consultoria e Acompanhamento
           </span>
         </div>
 
@@ -68,10 +68,10 @@ export function Hero() {
 ween gap-x-[30px] gap-y-5 mt-[clamp(30px,4vh,52px)] pt-[22px] b
 order-t border-[#FAF5EF]/18 [animation:fadeIn_1.6s_ease_1.4s_bo
 th]">
-          <span className="text-[13px] tracking-[.24em] upperca
+          {/* <span className="text-[13px] tracking-[.24em] upperca
 se text-[#FAF5EF]/85">
             Comércio · Serviços · Indústria · Terceiro setor
-          </span>  
+          </span>   */}
           </div>  
         <div className="flex flex-wrap items-center justify-between gap-x-[30px] gap-y-5 mt-[clamp(30px,4vh,52px)] pt-[22px]  [animation:fadeIn_1.6s_ease_1.4s_both]">
           <a
