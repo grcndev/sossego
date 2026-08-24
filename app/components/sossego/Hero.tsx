@@ -44,12 +44,17 @@ export function Hero() {
 >
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
     <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.6s_both]">
-      Múltiplos olhares
+      Acompanhamos você
     </span>
   </span>
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
     <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.74s_both]">
-     para sua empresa
+     ou sua empresa
+    </span>
+  </span>
+  <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
+    <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.88s_both]">
+      e te ajudamos a
     </span>
   </span>
   <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
@@ -57,11 +62,7 @@ export function Hero() {
      <em className="italic text-[#F2CE20]">navegar</em>
     </span>
   </span>
-  <span className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
-    <span className="block [animation:riseIn_1.4s_cubic-bezier(.2,.75,.15,1)_.88s_both]">
-      durante a crise.
-    </span>
-  </span>
+  
 </h1>
 
         <div className="flex flex-wrap items-center justify-bet

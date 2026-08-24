@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Sossego",
-  description: "Consultoria e Gestão de Crise",
+  description: "Consultoria e Acompanhamento",
   icons: {
     icon: [{ url: logo.src }],
     apple: [{ url: logo.src }],
